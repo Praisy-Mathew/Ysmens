@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y's Men International - Subregion | District Cabinet 2026-27</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <!-- CSS only -->
+   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+   <!-- fancybox -->
+   <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css"> 
+   <link rel="stylesheet" href="assets/css/nice-select.css">  
+   <!-- style -->
+   <link rel="stylesheet" href="assets/css/style.css">
+   <!-- responsive -->
+   <link rel="stylesheet" href="assets/css/responsive.css"> 
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/preloader.js"></script>
+    
+  <style>
+    /* Styling for the District Governor details block */
+    .team-details {
+        background: linear-gradient(135deg, #1f1b15 0%, #0d0a08 100%) !important;
+        border: 1px solid rgba(155, 134, 94, 0.35) !important;
+        padding: 55px 45px !important;
+        border-radius: 28px !important;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25) !important;
+        transition: all 0.4s ease;
+    }
+    .team-details::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(assets/img/pattern-image.jpg);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.05;
+        mix-blend-mode: overlay;
+        z-index: 1;
+        pointer-events: none;
+    }
+    .team-details:hover {
+        box-shadow: 0 30px 60px rgba(155, 134, 94, 0.18) !important;
+        border-color: #dfcb9f !important;
+    }
+    .team-details span {
+        color: var(--theme-colour) !important;
+        font-weight: 700;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
+    }
+    .team-details h2 {
+        color: white !important;
+        font-family: var(--hs-font);
+        font-size: 40px !important;
+        font-weight: 700 !important;
+        margin-bottom: 25px !important;
+        position: relative;
+        z-index: 2;
+        letter-spacing: 0.5px;
+    }
+    .team-details .get-in-touch {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+    }
+    .team-details .get-in-touch i {
+        width: 42px;
+        height: 42px;
+        background: rgba(155, 134, 94, 0.12);
+        border: 1px solid rgba(155, 134, 94, 0.25);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--theme-colour);
+        transition: all 0.3s ease;
+    }
+    .team-details:hover .get-in-touch i {
+        background: var(--theme-colour);
+        color: white;
+        border-color: var(--theme-colour);
+    }
+    .team-details .get-in-touch span {
+        font-size: 12px;
+        color: rgba(255,255,255,0.5) !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+    }
+    .team-details .get-in-touch p {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 600;
+        margin: 0;
+    }
+    .team-details-img img {
+        border: 4px solid rgba(255, 255, 255, 0.05) !important;
+        outline: 1px solid rgba(155, 134, 94, 0.3);
+        border-radius: 20px !important;
+        transition: all 0.5s ease;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+    .team-details:hover .team-details-img img {
+        outline-color: var(--theme-colour);
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 20px 45px rgba(155, 134, 94, 0.25);
+    }
+    .team-details .hs-social-media {
+        display: flex;
+        gap: 12px;
+        margin-top: 25px;
+        position: relative;
+        z-index: 2;
+    }
+    .team-details .hs-social-media a {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.05);
+        color: #bababa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    .team-details .hs-social-media a:hover {
+        background: var(--theme-colour);
+        color: white;
+        border-color: var(--theme-colour);
+        transform: translateY(-3px);
+    }
+
+    /* Biography Section Cards */
+    .team-detail-text {
+        background: linear-gradient(to right, #ffffff, #fdfcf9);
+        border-left: 4px solid var(--theme-colour);
+        padding: 35px;
+        border-radius: 0 20px 20px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.015);
+        margin-bottom: 25px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid rgba(0,0,0,0.03);
+        border-left: 4px solid var(--theme-colour);
+    }
+    .team-detail-text:hover {
+        transform: translateX(8px);
+        background: #fff;
+        box-shadow: 0 15px 35px rgba(155, 134, 94, 0.08);
+        border-left-color: #dfcb9f;
+    }
+    .team-detail-text h3 {
+        font-family: var(--hs-font);
+        font-size: 22px !important;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .team-detail-text h3 i {
+        width: 36px;
+        height: 36px;
+        background: rgba(155, 134, 94, 0.08);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px !important;
+        transition: all 0.3s ease;
+        color: var(--theme-colour);
+    }
+    .team-detail-text:hover h3 i {
+        background: var(--theme-colour);
+        color: #fff !important;
+        transform: scale(1.1);
+    }
+    .team-detail-text p {
+        font-size: 15px;
+        line-height: 26px;
+        color: #555;
+        margin: 0;
+    }
+
+    /* Cabinet Cards Styling */
+    .hs-page-horses .quality-horse {
+        background: #fff;
+        border: 1px solid rgba(155, 134, 94, 0.12);
+        border-radius: 24px;
+        padding: 28px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.015);
+        display: flex !important;
+        align-items: center;
+        gap: 28px;
+        margin-bottom: 30px !important;
+        position: relative;
+        overflow: hidden;
+    }
+    .hs-page-horses .quality-horse::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(155, 134, 94, 0.03) 0%, transparent 70%);
+        z-index: 1;
+        pointer-events: none;
+    }
+    .hs-page-horses .quality-horse:hover {
+        transform: translateY(-5px);
+        border-color: var(--theme-colour);
+        box-shadow: 0 20px 40px rgba(155, 134, 94, 0.12);
+    }
+    .hs-page-horses .quality-horse figure {
+        border-radius: 120px 20px 120px 20px !important;
+        width: 250px !important;
+        height: 320px !important;
+        flex: 0 0 250px !important;
+        margin: 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        border: 3px solid #fff;
+        outline: 1px solid rgba(155, 134, 94, 0.2);
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+    .hs-page-horses .quality-horse:hover figure {
+        border-radius: 20px 120px 20px 120px !important;
+        outline-color: var(--theme-colour);
+        box-shadow: 0 12px 28px rgba(155, 134, 94, 0.25);
+        transform: scale(1.02);
+    }
+    .hs-page-horses .quality-horse img {
+        border-radius: 115px 15px 115px 15px !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top;
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .hs-page-horses .quality-horse:hover img {
+        border-radius: 15px 115px 15px 115px !important;
+    }
+    .hs-page-horses .quality-horse h2 {
+        font-family: var(--hs-font);
+        font-size: 21px !important;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px !important;
+        line-height: 28px !important;
+        transition: color 0.3s ease;
+    }
+    .hs-page-horses .quality-horse:hover h2 {
+        color: var(--theme-colour);
+    }
+    .hs-page-horses ul.icon-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .hs-page-horses ul.icon-list li {
+        margin: 0;
+    }
+    .hs-page-horses ul.icon-list li:nth-child(1) {
+        background: rgba(155, 134, 94, 0.07) !important;
+        border: 1px solid rgba(155, 134, 94, 0.2) !important;
+        border-radius: 30px !important;
+        padding: 4px 14px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        width: fit-content !important;
+        margin-bottom: 8px !important;
+    }
+    .hs-page-horses ul.icon-list li:nth-child(1) i {
+        display: none !important;
+    }
+    .hs-page-horses ul.icon-list li:nth-child(1) h3 {
+        color: var(--theme-colour) !important;
+        font-weight: 700 !important;
+        font-size: 13px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.8px !important;
+        line-height: 14px !important;
+    }
+    .hs-page-horses ul.icon-list li:not(:nth-child(1)) {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin-top: 2px !important;
+    }
+    .hs-page-horses ul.icon-list li:not(:nth-child(1)) i {
+        width: 18px !important;
+        height: 18px !important;
+        border: none !important;
+        background: transparent !important;
+        color: var(--theme-colour) !important;
+        font-size: 13px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        flex-shrink: 0;
+    }
+    .hs-page-horses ul.icon-list li:not(:nth-child(1)) h3 {
+        font-size: 13px !important;
+        color: #666 !important;
+        font-weight: 400 !important;
+        line-height: 18px !important;
+        margin: 0 !important;
+    }
+    
+    /* Cabinet Group Headings Styles */
+    .cabinet-group-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 2px solid #eef0f2;
+        padding-bottom: 15px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 100%;
+        position: relative;
+    }
+    .cabinet-group-title span {
+        font-family: var(--hs-font);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--theme-colour);
+        background: rgba(155, 134, 94, 0.08);
+        border: 1px solid rgba(155, 134, 94, 0.2);
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    .cabinet-group-title h3 {
+        font-family: var(--hs-font);
+        font-size: 24px !important;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0 !important;
+        letter-spacing: 0.5px;
+    }
+    
+
+    
+    /* Responsive overrides for Cabinet Cards on Mobile View */
+    @media (max-width: 768px) {
+        .hs-page-horses .quality-horse {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            padding: 30px 24px !important;
+            gap: 20px !important;
+        }
+        .hs-page-horses .quality-horse figure {
+            width: 320px !important;
+            height: 550px !important;
+            flex: 0 0 320px !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+        }
+        .hs-page-horses ul.icon-list {
+            align-items: center !important;
+        }
+        .hs-page-horses ul.icon-list li:nth-child(1) {
+            margin: 0 auto 8px auto !important;
+        }
+        .hs-page-horses ul.icon-list li:not(:nth-child(1)) {
+            justify-content: center !important;
+        }
+    }
+  </style>
+  </head>
+<body>
+<!-- preloader -->
+<div class="preloader">
+  <div id="loader"></div>
+</div>
+<!-- preloader end -->
+<header class="hs-header">
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-slid"> 
+        <div class="phone-data">
+          <div class="phone">
+            <i style="margin-right: 10px; color: var(--theme-colour);">
+              <i class="fa-solid fa-quote-left"></i>
+            </i>
+            <span style="font-weight: 600; font-size: 15px;">Our Motto: <span style="font-style: italic; font-weight: 400;">"To Acknowledge the Duty That Accompanies Every Right"</span></span> 
+          </div>
+        </div>
+        <div class="login">
+          <a href="tel:+919074517258" style="display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-phone" style="color: var(--theme-colour);"></i>
+              <span style="font-weight: 600;">+91 9074517258</span>
+          </a> 
+            <div class="hs-social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hs-bottom-bar">
+    <div class="container">
+        <div class="bottom-bar-text">
+          <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/img/ys mens logo.png" alt="Y's Men Logo" style="max-height: 130px; width: auto;">
+            </a>
+          </div>
+            <nav class="hs-navbar">
+                <ul class="navbar-links">
+                    <li class="navbar-dropdown">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="javascript:void(0)">About <i class="fa-solid fa-angle-down" style="font-size:12px; margin-left:5px;"></i></a>
+                        <ul class="sub-menu">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="invocation.html">Invocations</a></li>
+                                <li><a href="message.html">Leadership Messages</a></li>
+                            </ul>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="service.html">Our Services</a>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="javascript:void(0)">Our Team <i class="fa-solid fa-angle-down" style="font-size:12px; margin-left:5px;"></i></a>
+                        <ul class="sub-menu">
+                                <li><a href="team.html">District Cabinet</a></li>
+                                <li><a href="club.html">Our Clubs</a></li>
+                            </ul>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="bar-menu">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-end">
+                 <a href="javascript:void(0)" id="desktop-menu" class="menu-start">
+                  <svg id="ham-menue" viewBox="0 0 100 100"> <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path> <path class="line line2" d="M 20,50 H 80"></path> <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path> </svg>
+                </a>
+                
+                
+                
+            </div>
+      </div>
+    </div>
+  </div>
+    <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+        <div class="res-log">
+            <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/img/ys mens logo.png" alt="Y's Men Logo" style="max-height: 130px; width: auto;">
+            </a>
+          </div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="menu-item-has-children">
+                <a href="javascript:void(0)">About</a>
+                <ul class="sub-menu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="invocation.html">Invocations</a></li>
+                    <li><a href="message.html">Leadership Messages</a></li>
+                </ul>
+            </li>
+            <li><a href="service.html">Our Services</a></li>
+            <li class="menu-item-has-children">
+                <a href="javascript:void(0)">Our Team</a>
+                <ul class="sub-menu">
+                    <li><a href="team.html">District Cabinet</a></li>
+                    <li><a href="club.html">Our Clubs</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="JavaScript:void(0)" id="res-cross"></a>
+    </div>
+    <div class="mobile-nav desktop-menu">
+            <h2>District 1 - Central Travancore Region</h2>
+            <p class="des">"To Acknowledge the Duty That Accompanies Every Right."<br><br>Y's Men International is oriented to serving the worldwide YMCA and the communities in which it is present throughout the world.</p>
+            <figure>
+              <img src="assets/img/ys mens2.jpeg" alt="Y's Men Community Service" style="border-radius: 8px;">
+            </figure>
+            <h3>Get in touch</h3>
+            <p class="num"><a href="tel:+919074517258">+91 9074517258</a></p>
+            <div class="social-medias">
+                <a href="javascript:void(0)">Facebook</a>
+                <a href="javascript:void(0)">Twitter</a>
+                <a href="javascript:void(0)">Linkedin</a>
+              </div>
+          </div>
+  </header>
+<section class="hs-banner" style="background-image: url(https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1920&h=460);">
+    <div class="container">
+        <div class="hs-banner-style">
+            <h1>District Cabinet 2026-27</h1>
+            <p>Central Travancore Region, Zone 1, District 1 | Motto: To acknowledge the duty that accompanies every right</p>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">District Cabinet</li>
+            </ol>
+        </div>
+    </div>
+    <img src="assets/img/theme-shap-img-1.png" alt="theme-shap" class="theme-shap">
+</section>
+<section class="gap">
+    <div class="container"> 
+        <div class="team-details" style="background-image: url(assets/img/pattern-image.jpg); margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;"> 
+             <div style="flex: 1 1 500px; position: relative; z-index: 11;">
+                <span>District Governor, District 1</span>
+                <h2>Ym.PWAF.Rahul S.kumar</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="get-in-touch">
+                            <div>
+                                <i>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </i>
+                            </div>
+                            <div>
+                              <span>Location:</span> 
+                              <p>Adoor, Kerala, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="get-in-touch">
+                            <div>
+                                <i>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                </i>
+                            </div>
+                            <div>
+                              <span>Theme:</span> 
+                              <p>"UNITED WE SERVE, UNITED WE GROW"</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="hs-social-media">
+                    <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+                </div>
+             </div>
+             <div class="team-details-img" style="flex: 0 0 350px; max-width: 100%; position: relative; z-index: 11;"> 
+                   <img src="assets/img/ys team1.jpeg" alt="District Governor Rahul S. Kumar" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
+             </div>  
+             
+             <img src="assets/img/theme-shap-img-1.png" alt="theme-shap" class="theme-shap">
+        </div>
+        
+        <div class="team-detail-text">
+            <h3><i class="fa-solid fa-address-card" style="color: var(--theme-colour); font-size: 18px;"></i> District Governor's Biography</h3>
+            <p>Ym.PWAF.Rahul S. Kumar brings a wealth of leadership experience and a dynamic vision to his role as District Governor of District 1. A seasoned professional and passionate community leader, Rahul's journey with the Y's Men Club began as a charter member of the Y's Men Club of Adoor Royal City. His dedication was evident through his service as Club Secretary and an impressive five terms as president. Under his exceptional leadership, the Adoor Royal City club flourished, earning recognition as an outstanding club within the CTR region and across Kerala. With his proven track record of leadership, commitment to community, and diverse expertise, Rahul S. Kumar is poised to lead District 1 with innovation and dedication.</p>
+        </div>
+
+        <div class="team-detail-text">
+            <h3><i class="fa-solid fa-graduation-cap" style="color: var(--theme-colour); font-size: 18px;"></i> Academic Background & Creative Talents</h3>
+            <p>Rahul has a long-standing reputation for artistic talent, which has been evident since his school days. This creative flair beautifully complements his strong academic background, which includes two Bachelor's degrees and a Master's degree in Business Administration (MBA). Beyond his corporate and social leadership roles, Rahul is also a leading ad film director and writer, applying his artistic vision to creative media projects.</p>
+        </div>
+
+        <div class="team-detail-text">
+            <h3><i class="fa-solid fa-briefcase" style="color: var(--theme-colour); font-size: 18px;"></i> Professional Career & Business Ventures</h3>
+            <p>Rahul's diverse professional career spans various corporate and entrepreneurial sectors. He has previously served as an Area Manager for HDFC Bank and as an Indian consultant for CGL Shipping Company. Currently, he is the owner of Adithya Movie Creation (a Malayalam movie production and distribution company), the Managing Director of R Studio Nexus Pvt Ltd in Cochin, the Managing Director of Thompil Chits Pvt Ltd in Thatta, Adoor, and the Chairman of Federal College Kottiyam.</p>
+        </div>
+
+        <div class="team-detail-text" style="margin-bottom: 50px;">
+            <h3><i class="fa-solid fa-users-rectangle" style="color: var(--theme-colour); font-size: 18px;"></i> Family Background & Legacy</h3>
+            <p>Rahul S. Kumar is the grandson of Thompil Raghava Kurup and the elder son of Thompil Sreekumar and Thulasi S. Kumar. His brother, Dr. Kapil S. Kumar, is a medical professional. Rahul is happily married to Adv. Lakshmi Raj, and the couple has two sons: Advaith Rahul, who recently completed his Higher Secondary (Plus Two) education, and Adithya Dev Rahul, who is currently studying in the 8th standard.</p>
+        </div>
+    </div>
+</section>
+<section class="gap hs-page-horses" style="background-color: #fbfbf9; border-top: 1px solid #eef0f2; padding-top: 80px;">
+    <div class="container">
+        <div class="hs-heading text-center" style="margin-bottom: 50px;">
+            <img src="assets/img/heading-img.png" alt="heading-img" style="margin-bottom: 15px; display: inline-block;">
+            <span style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--theme-colour); font-weight: 700; display: block;">District Cabinet 2026-27</span>
+            <h2 style="font-family: var(--hs-font); font-size: 38px; color: #222; margin-top: 10px;">Our Leadership Team</h2>
+        </div>
+        <div class="row">
+            <!-- Group 1: District Executive Officers -->
+            <div class="col-lg-12 mb-4">
+                <div class="cabinet-group-title">
+                    <span>01</span>
+                    <h3>District Executive Officers</h3>
+                </div>
+            </div>
+            <!-- 1. District Governor -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team1.jpeg" alt="Ym.PWAF.Rahul S.kumar">
+                    </figure>
+                    <div>
+                        <h2>Ym.PWAF.Rahul S.kumar</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Governor</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>"UNITED WE SERVE, UNITED WE GROW"</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. DG Elect -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team2.jpeg" alt="Ym. Er. Geoby Thomas">
+                    </figure>
+                    <div>
+                        <h2>Ym. Er. Geoby Thomas</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>DG Elect</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. IPDG -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ysmens team27.jpeg" alt="Ym.PWAF Jacob Vaidyan">
+                    </figure>
+                    <div>
+                        <h2>Ym.PWAF Jacob Vaidyan</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>IPDG</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. District Secretary -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team14.jpeg" alt="Yw.PWAF. Biny Andrew">
+                    </figure>
+                    <div>
+                        <h2>Yw.PWAF. Biny Andrew</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Secretary</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. District Treasurer -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team11.jpeg" alt="Ym. Reji L Achari">
+                    </figure>
+                    <div>
+                        <h2>Ym. Reji L Achari</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Treasurer</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2: Advisors & Patrons -->
+            <div class="col-lg-12 mb-4 mt-4">
+                <div class="cabinet-group-title">
+                    <span>02</span>
+                    <h3>Advisors & Patrons</h3>
+                </div>
+            </div>
+            <!-- 6. District Advisor 1 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team6.jpeg" alt="Ym.PWAF.Rajan Anaswara">
+                    </figure>
+                    <div>
+                        <h2>Ym.PWAF.Rajan Anaswara</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Advisor</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. District Advisor 2 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team7.jpeg" alt="Ym.PWAF.Prof. John M George">
+                    </figure>
+                    <div>
+                        <h2>Ym.PWAF.Prof. John M George</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Advisor</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. District Advisor 3 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ysmens team29.jpeg" alt="Ym.PWAF.Binu Variathu">
+                    </figure>
+                    <div>
+                        <h2>Ym.PWAF.Binu Variathu</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Advisor</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. District Patron -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team8.jpeg" alt="Ym. Er. Thomas Mathew">
+                    </figure>
+                    <div>
+                        <h2>Ym. Er. Thomas Mathew</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Patron</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 3: Programs Coordination & Core Team -->
+            <div class="col-lg-12 mb-4 mt-4">
+                <div class="cabinet-group-title">
+                    <span>03</span>
+                    <h3>Programs Coordination & Core Team</h3>
+                </div>
+            </div>
+            <!-- 10. District Y's Guy -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team2.jpeg" alt="Ym.Vinod Vasukurup">
+                    </figure>
+                    <div>
+                        <h2>Ym.Vinod Vasukurup</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>District Y's Guy</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Bulletin Editor -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team3.jpeg" alt="Ym. Ar. Eby T George">
+                    </figure>
+                    <div>
+                        <h2>Ym. Ar. Eby T George</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Bulletin Editor</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Program Coordinator 1 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team15.jpeg" alt="Ywt. Tinu Susan Thomas">
+                    </figure>
+                    <div>
+                        <h2>Ywt. Tinu Susan Thomas</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Program Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. Program Coordinator 2 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=305&h=305" alt="Ym.johnson kulathinkarott">
+                    </figure>
+                    <div>
+                        <h2>Ym.johnson kulathinkarott</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Program Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. Program Coordinator 3 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team12.jpeg" alt="Ym. PWAF. NAVAS H R">
+                    </figure>
+                    <div>
+                        <h2>Ym. PWAF. NAVAS H R</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Program Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. Program Coordinator 4 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team16.jpeg" alt="Yw. Dr. Biji Joy">
+                    </figure>
+                    <div>
+                        <h2>Yw. Dr. Biji Joy</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Program Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. Web master -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team4.jpeg" alt="Yw. Rani Jose">
+                    </figure>
+                    <div>
+                        <h2>Yw. Rani Jose</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Web master</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17. Dist. youth Coordinator -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team13.jpeg" alt="Yw. Sree lekshmi">
+                    </figure>
+                    <div>
+                        <h2>Yw. Sree lekshmi</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Dist. youth Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. Dist.menett's Coordinator -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team9.jpeg" alt="Yw. Sandra Sethu">
+                    </figure>
+                    <div>
+                        <h2>Yw. Sandra Sethu</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Dist.menett's Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19. Endowment Fund Coordinator -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team5.jpeg" alt="Ym.Shajith">
+                    </figure>
+                    <div>
+                        <h2>Ym.Shajith</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Endowment Fund Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20. Dist. Program Coordinator -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team10.jpeg" alt="Yw. Dr. Deepthi krishna">
+                    </figure>
+                    <div>
+                        <h2>Yw. Dr. Deepthi krishna</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Dist. Program Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 21. Dist. Cultural Coordinator 1 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="assets/img/ys team17.jpeg" alt="Ym. N Mohanan">
+                    </figure>
+                    <div>
+                        <h2>Ym. N Mohanan</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Dist. Cultural Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 22. Dist. Cultural Coordinator 2 -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=305&h=305" alt="Ym. Nisha Aby">
+                    </figure>
+                    <div>
+                        <h2>Ym. Nisha Aby</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Dist. Cultural Coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 23. Project Coordinator -->
+            <div class="col-lg-6">
+                <div class="quality-horse img-hover mb-lg-0">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&q=80&w=305&h=305" alt="Ym. Sheeja Reji">
+                    </figure>
+                    <div>
+                        <h2>Ym. Sheeja Reji</h2> 
+                        <ul class="icon-list">
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                               </i> 
+                               <h3>Project coordinator</h3> 
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                               </i> 
+                               <h3>Central Travancore Region, Zone 1</h3>
+                            </li>
+                            <li>
+                               <i>
+                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                               </i> 
+                               <h3>District 1</h3> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>   
+
+
+<footer style="background-image: url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1920&h=1057);">
+    <div class="container">
+        <div class="quote">
+            <i><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g id="Layer_2_00000050661783374764352720000012261587032530886067_"><g id="Layer_1-2"><g id="Special_Characters"><path id="_12" d="m252.9 215.9c1.8 0 2.5.8 2.5 2.5v6.8c-.1 1.3-.5 2.6-1.2 3.8l-50.2 66c-.8 1.2-2.5 1.6-3.8.8l-13.8-7.5c-1-.8-1.2-1.8-.8-3.5l19.2-66.5c.3-1.3 1.4-2.2 2.8-2.2h45.3zm71.2 0c1.8 0 2.5.8 2.5 2.5v6.8c-.1 1.3-.5 2.6-1.2 3.8l-50.2 66c-.8 1.2-2.5 1.6-3.8.8l-14-7.5c-1-.8-1.2-1.8-.8-3.5l19.2-66.5c.3-1.4 1.6-2.3 3-2.2h45.3z"/></g></g></g></svg></i>
+            <div> 
+                <p>"To Acknowledge the Duty That Accompanies Every Right"</p>
+                <ul class="star">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                </ul>
+                <span>( Dedicated to Community Fellowship & Service )</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="hs-footer">
+                    <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/img/ys mens logo.png" alt="Y's Men Logo" style="max-height: 130px; width: auto;">
+            </a>
+          </div>
+                    <p class="mt-3">Y’s Men International is a worldwide fellowship of persons of all faiths working constructively together, based on the teachings of Jesus Christ, in partnership with and supporting the YMCA, striving through active service to develop, encourage and provide leadership to build a better world.</p>
+                    <div class="hs-social-media">
+                        <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                        <a href="#">
+                            <i>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2_31927)">
+                                    <path d="M10.6755 7.62177L17.2323 0H15.6785L9.98524 6.61788L5.43803 0H0.193359L7.06963 10.0074L0.193359 18H1.7472L7.75946 11.0113L12.5616 18H17.8063L10.6751 7.62177H10.6755ZM8.54726 10.0956L7.85055 9.09906L2.30708 1.16971H4.69369L9.16734 7.56895L9.86405 8.56546L15.6793 16.8835H13.2926L8.54726 10.096V10.0956Z" fill="white"/>
+                                    </g> 
+                                </svg>
+                             </i>
+                        </a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-lg-4 col-md-6">
+                <div class="widget-title">
+                  <h3>Contact Us</h3> 
+                  <div class="get-in-touch">
+                    <div><i>
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg3810" xml:space="preserve" width="682.66669" height="682.66669" viewBox="0 0 682.66669 682.66669"><defs id="defs3814"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath3824"><path d="M 0,512 H 512 V 0 H 0 Z" id="path3822"/></clipPath></defs><g id="g3816" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g id="g3818"><g id="g3820" clip-path="url(#clipPath3824)"><g id="g3826" transform="translate(409.9102,69.6396)"><path d="m 0,0 c 0,-32.939 -26.7,-59.64 -59.641,-59.64 h -64.599 c -22.59,0 -43.24,12.76 -53.34,32.97 L -190.92,0 -220.74,-59.64 -250.561,0 -280.38,-59.64 -310.2,0 -340.021,-59.64 -369.84,0 -399.66,-59.64" style="fill:none;stroke:#BABABA;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3828"/></g><g id="g3830" transform="translate(266.25,246)"><path d="m 0,0 c 0,-5.522 -4.478,-10 -10,-10 -5.522,0 -10,4.478 -10,10 0,5.522 4.478,10 10,10 C -4.478,10 0,5.522 0,0" style="fill:#BABABA;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3832"/></g><g id="g3834" transform="translate(224.9414,278.2939)"><path d="m 0,0 c -12.175,14.184 -23.106,28.649 -32.062,42.666 -7.379,11.54 -5.149,26.83 4.541,36.521 l 33.66,33.659 c 7.24,7.24 7.24,18.98 0,26.22 l -79.21,79.21 c -7.241,7.24 -18.981,7.24 -26.231,0 l -20.04,-20.05 c -32.529,-32.53 -41.33,-82.16 -20.909,-123.39 36.34,-73.35 123.1,-197.78 267.149,-268.41 41.34,-20.27 91.92,-11.67 124.481,20.88 l 20.5,20.5 c 7.239,7.25 7.239,18.99 0,26.23 l -79.91,79.2 c -7.25,7.25 -18.99,7.25 -26.231,0 l -33.66,-33.65 c -9.68,-9.69 -24.97,-11.92 -36.519,-4.54 -10.185,6.506 -20.61,14.058 -30.994,22.375" style="fill:none;stroke:#BABABA;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path3836"/></g></g></g></g></svg>
+                    </i></div>
+                    <div>
+                      <span>Phone No:</span> 
+                      <h3><a href="callto:+123456789">+1 234 56789</a></h3>
+                    </div>
+                  </div>
+                  <div class="get-in-touch">
+                    <div>
+                        <i>
+                          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.12435 7.91634C5.81268 7.91634 4.74935 8.97963 4.74935 10.2913V27.708C4.74935 29.0197 5.81268 30.083 7.12435 30.083H30.8743C32.1861 30.083 33.2493 29.0197 33.2493 27.708V14.2497C33.2493 13.8124 33.6038 13.458 34.041 13.458C34.4783 13.458 34.8327 13.8124 34.8327 14.2497V27.708C34.8327 29.8941 33.0605 31.6663 30.8743 31.6663H7.12435C4.93822 31.6663 3.16602 29.8941 3.16602 27.708V10.2913C3.16602 8.10523 4.93822 6.33301 7.12435 6.33301H24.541C24.9783 6.33301 25.3327 6.68745 25.3327 7.12467C25.3327 7.5619 24.9783 7.91634 24.541 7.91634H7.12435Z" fill="#BABABA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5229 12.8979C10.832 12.5887 11.3333 12.5887 11.6424 12.8979L18.4395 19.695C18.7487 20.0041 19.25 20.0041 19.5591 19.695L26.3562 12.8979C26.6654 12.5887 27.1666 12.5887 27.4758 12.8979C27.7849 13.207 27.7849 13.7083 27.4758 14.0174L20.6787 20.8145C19.7512 21.7421 18.2475 21.7421 17.32 20.8145L10.5229 14.0174C10.2137 13.7083 10.2137 13.207 10.5229 12.8979Z" fill="#BABABA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.6667 8.70801C32.5411 8.70801 33.25 7.99915 33.25 7.12467C33.25 6.25022 32.5411 5.54134 31.6667 5.54134C30.7922 5.54134 30.0833 6.25022 30.0833 7.12467C30.0833 7.99915 30.7922 8.70801 31.6667 8.70801ZM31.6667 10.2913C33.4155 10.2913 34.8333 8.87355 34.8333 7.12467C34.8333 5.37577 33.4155 3.95801 31.6667 3.95801C29.9178 3.95801 28.5 5.37577 28.5 7.12467C28.5 8.87355 29.9178 10.2913 31.6667 10.2913Z" fill="#BABABA"/>
+                            </svg> 
+                        </i>
+                    </div>
+                    <div>
+                      <span>Email Address:</span> 
+                      <h3><a href="mailto:info@ysmens.org">info@ysmens.org</a></h3>
+                    </div>
+                  </div>
+                  <div class="get-in-touch">
+                    <div><i>
+                      <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0006 3.00494C7.66088 3.00494 2.52148 8.17617 2.52148 14.5552C2.52148 16.0006 3.18896 17.8544 4.34789 19.9256C5.48895 21.9649 7.02597 24.0754 8.58686 25.9976C10.1442 27.9152 11.7046 29.6204 12.8774 30.8473C13.3128 31.3029 13.694 31.6916 14.0006 32C14.3073 31.6916 14.6884 31.3029 15.1239 30.8473C16.2967 29.6204 17.8572 27.9152 19.4144 25.9976C20.9753 24.0754 22.5123 21.9649 23.6534 19.9256C24.8123 17.8544 25.4798 16.0006 25.4798 14.5552C25.4798 8.17617 20.3404 3.00494 14.0006 3.00494ZM14.0006 33.6728C13.1838 34.5401 13.1834 34.5397 13.1834 34.5397L13.1726 34.5294L13.1434 34.5014L13.0333 34.3948C12.9376 34.3018 12.7986 34.1656 12.6222 33.9904C12.2694 33.6401 11.7673 33.1333 11.1656 32.5038C9.96337 31.246 8.35719 29.4915 6.74774 27.5096C5.14201 25.5322 3.51234 23.3033 2.27838 21.0981C1.06236 18.9249 0.146484 16.6292 0.146484 14.5552C0.146484 6.85637 6.34919 0.615234 14.0006 0.615234C21.6521 0.615234 27.8548 6.85637 27.8548 14.5552C27.8548 16.6292 26.939 18.9249 25.7229 21.0981C24.4889 23.3033 22.8593 25.5322 21.2536 27.5096C19.6442 29.4915 18.0379 31.246 16.8358 32.5038C16.234 33.1333 15.7318 33.6401 15.3792 33.9904C15.2028 34.1656 15.0637 34.3018 14.968 34.3948L14.8578 34.5014L14.8287 34.5294L14.8208 34.537L14.8186 34.5391C14.8186 34.5391 14.8175 34.5401 14.0006 33.6728ZM14.0006 33.6728L14.8186 34.5391L14.0006 35.319L13.1834 34.5397L14.0006 33.6728Z" fill="#BABABA"/>
+                        <path d="M14.0013 16.1481C14.8757 16.1481 15.5846 15.4349 15.5846 14.555C15.5846 13.6752 14.8757 12.9619 14.0013 12.9619C13.1268 12.9619 12.418 13.6752 12.418 14.555C12.418 15.4349 13.1268 16.1481 14.0013 16.1481Z" fill="#BABABA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0013 14.1573C13.7827 14.1573 13.6055 14.3355 13.6055 14.5555C13.6055 14.7755 13.7827 14.9538 14.0013 14.9538C14.2199 14.9538 14.3971 14.7755 14.3971 14.5555C14.3971 14.3355 14.2199 14.1573 14.0013 14.1573ZM11.2305 14.5555C11.2305 13.0157 12.471 11.7676 14.0013 11.7676C15.5315 11.7676 16.7721 13.0157 16.7721 14.5555C16.7721 16.0953 15.5315 17.3435 14.0013 17.3435C12.471 17.3435 11.2305 16.0953 11.2305 14.5555Z" fill="#BABABA"/>
+                        </svg> 
+                      </i></div>
+                    <div>
+                      <span>Location:</span>
+                      <p>Subregional Council Headquarters, YMCA Campus</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="widget-title">
+                  <h3>Newsletter</h3> 
+                  <p>Stay updated with our latest news, projects, and activities.</p>
+                  <form>
+                    <div class="form-box">
+                      <input type="email" placeholder="Your email..." required>
+                      <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="terms">
+                      <input type="checkbox" required>
+                      <label>I hereby accept all terms and conditions.</label>
+                    </div>
+                  </form>
+              </div>
+            </div>      
+        </div>
+        <div class="copyright">
+            <p>Copyright © <b>Y's Men International - Subregion</b> 2026. All Rights Reserved.</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Terms Privacy</a></li>
+                <li><a href="#">Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <img src="assets/img/theme-shap-img-1.png" alt="theme-shap" class="theme-shap">
+</footer>
+<!-- search-popup -->
+<div class="search-popup">
+    <button class="close-search"><i class="fa-solid fa-xmark"></i></button>
+    <form method="post" action="#">
+        <p>What are you looking for?</p>
+        <div class="form-group">
+             <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fa fa-search"></i></button> 
+        </div>
+    </form>
+</div>
+<div class="quote-popup contact-popup">
+    <form class="popup-form" style="background-image: url(assets/img/pattern-image.jpg);"> 
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&q=80&w=665&h=449" alt="img">
+                </div>
+                <div class="col-lg-6">
+                <div class="form-field"> 
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Join Our Fellowship</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="name" placeholder="Complete Name" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="col-lg-12"> 
+                            <input type="number" name="number" placeholder="Phone No" required>
+                        </div> 
+                        <div class="col-lg-12">
+                        <select class="nice-select Advice">
+                            <option value="">Select Pathway</option>
+                            <option value="member">Become a Club Member</option>
+                            <option value="partner">Become a Service Partner</option>
+                            <option value="youth">Join as a Youth Leader</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button class="hs-btn">Submit Now</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <i class="close-popup fa-solid fa-xmark"></i>
+    </form>
+</div>
+<!-- search-popup end -->
+<!-- progress -->
+<div id="progress">
+      <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
+</div>
+<!-- search-popup -->
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- fancybox -->
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="assets/js/owl.carousel.js"></script> 
+<script src="assets/js/carousel-in.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
